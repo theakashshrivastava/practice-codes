@@ -1,0 +1,13 @@
+package interviews.questions.custom.objects;
+
+import java.util.List;
+import java.util.Map;
+import java.util.OptionalDouble;
+import java.util.stream.Collectors;
+
+public class AverageAge {
+    public static void main(String[] args) {
+        List<Employee> e = EmployeeList.getEmployees();
+       e.stream().mapToInt(Employee::getAge).average().ifPresent(System.out::println);
+    }
+}
